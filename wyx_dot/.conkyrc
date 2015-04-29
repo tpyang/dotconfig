@@ -1,0 +1,70 @@
+update_interval 2
+own_window yes
+own_window_transparent yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+
+# fonts
+use_xft yes
+text_buffer_size 2048
+xftfont black:size=9
+xftalpha 0.7
+font arial black:size=8
+uppercase no
+use_spacer none
+
+# apperances
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+border_width 0
+default_color grey
+own_window_colour white
+
+no_buffers yes
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+
+# position
+alignment top_left
+gap_x 15
+gap_y 40
+top_name_width 12
+TEXT
+${font arial black:size=12}${color magneta}SYSTEM${color}${font arial black:size=8}information${color magneta} ${hr 2}$color$font
+$nodename $kernel
+UP: $font$uptime ${voffset -18}
+${voffset 6}${font arial black:size=30}${time %e}$font ${voffset -17}${time %A, }${time %B} ${time %G}
+${voffset -2}${goto 65}${font arial black:size=10} ${time %I:%M:%S %p} ${font arial black:size=12}
+${color magneta}CPU${color}${font arial black:size=8}information${color magneta} ${hr 2}$color$font
+USAGE: $font${cpu cpu0}%
+${cpugraph cpu0 C0C0C0 C0C0C0}
+Name${goto 120} PID${goto 160} CPU${goto 200} MEM
+${color #ddaa00}${top name 1}${goto 120}${top pid 1}${goto 160}${top cpu 1}${goto 200}${top mem 1}
+${color lightgrey}${top name 2}${goto 120}${top pid 2}${goto 160}${top cpu 2}${goto 200}${top mem 2}
+${color lightgrey}${top name 3}${goto 120}${top pid 3}${goto 160}${top cpu 3}${goto 200}${top mem 3}$color$font
+${font arial black:size=12}${color magneta}Storage${color}${font arial black:size=8}information${color magneta} ${hr 2}$color$font
+RAM: $font$memperc% ${alignr}$mem/$memmax
+${membar}
+ROOT:$font${fs_used_perc /}% ${alignr}${fs_used /}/${fs_size /}
+${fs_bar /}$color
+HOME:$font${fs_used_perc /home}% ${alignr}${fs_used /home}/${fs_size /home}
+${fs_bar /home/}$color
+Read: ${diskio_read /dev/sda}${alignc}/dev/sda${alignr}Write: ${diskio_write /dev/sda}
+${diskiograph_read /dev/sda 20,115} ${diskiograph_write /dev/sda 20,115}
+Read: ${diskio_read /dev/sdb}${alignc}/dev/sdb${alignr}Write: ${diskio_write /dev/sdb}
+${diskiograph_read /dev/sdb 20,115} ${diskiograph_write /dev/sdb 20,115}
+${font arial black:size=12}${color magneta}NETWORK${color}${font arial black:size=8}information${color magneta} ${hr 2}$color$font
+DOWN: $font$color${downspeed eth0}/${totaldown eth0}
+UP: $font${upspeed eth0}/${totalup eth0}
+${downspeedgraph eth0 20,115 C0C0C0 C0C0C0} ${upspeedgraph eth0 20,115 C0C0C0 C0C0C0}$color
+IN: $font${tcp_portmon 1 32767 count} OUT: $font${tcp_portmon 32768 61000 count}${alignr}TOTAL: $font${tcp_portmon 1 65535 count}
+LOCAL:$font ${addr eth0}${color}
+${font arial black:size=12}${color magneta}BATTERY${color}${font arial black:size=8}information${color magneta} ${hr 2}$color$font
+${battery_bar}
+STATE: $font$color${battery} $alignr ${battery_time}
+FAN: $font$color${ibm_fan}rpm${alignr}
+TEMPERATURE:$font ${acpitemp}°C${color}
