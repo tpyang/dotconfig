@@ -1,0 +1,28 @@
+{
+"configs" : [{
+"server" : "107.170.209.234",
+"server_port" : 8888,
+"local_port" : 1080,
+"password" : "yang@shadow",
+"method" : "aes-256-cfb",
+"remarks" : "osmath"}
+,{
+"server" : "166.111.26.5",
+"server_port" : 6279,
+"local_port" : 2126,
+"password" : "dpc62792126",
+"method" : "aes-256-cfb",
+"remarks" : "dpc"}
+,{
+"server" : "jp.everpcpc.com",
+"server_port" : 9811,
+"local_port" : 1992,
+"password" : "CodingAnt",
+"method" : "table",
+"remarks" : "pc"}
+],
+"index" : 1,
+"global" : false,
+"enabled" : true,
+"shareOverLan" : false,
+"isDefault" : false}

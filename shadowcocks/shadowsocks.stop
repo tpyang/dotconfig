@@ -1,0 +1,4 @@
+#!/bin/sh
+/etc/init.d/shadowsocks stop
+/etc/init.d/shadowsocks_pc stop
+/etc/init.d/shadowsocks_dpc stop

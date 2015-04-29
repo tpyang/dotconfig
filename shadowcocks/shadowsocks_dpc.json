@@ -1,0 +1,8 @@
+{
+    "server":"166.111.26.5",
+    "server_port":6279,
+    "local_port":2126,
+    "password":"dpc62792126",
+    "timeout":60,
+    "method":"aes-256-cfb"
+}

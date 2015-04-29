@@ -1,0 +1,8 @@
+{
+    "server":"jp.everpcpc.com",
+    "server_port":9811,
+    "local_port":1992,
+    "password":"CodingAnt",
+    "timeout":600,
+    "method":"Table"
+}
