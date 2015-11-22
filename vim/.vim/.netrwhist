@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/yang/Documents/thesis/ref'
+let g:netrw_dirhist_2='/home/yang/.texmf-var'
+let g:netrw_dirhist_3='/home/yang/.vim/bundle/nerdcommenter'
